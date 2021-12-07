@@ -1,8 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Expense from "./components/Expenses/Expense";
+import NewExpense from "./components/NewExpense/NewExpense";
 
-const App = ()=> {
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -24,7 +25,12 @@ const App = ()=> {
       date: new Date(2021, 5, 12),
     },
   ];
-  return <div>{<Expense items={expenses} />}</div>;
-}
+  return (
+    <div>
+      <NewExpense />
+      <Expense items={expenses} />
+    </div>
+  );
+};
 
 export default App;
